@@ -1,0 +1,47 @@
+---
+title: "Relatório"
+author: "João Gabriel"
+date: "2023-02-07"
+output: html_document
+---
+
+## Questão 1
+
+Encontre média, desvio-padrão, mediana, Q1, Q3, mínimo e máximo dos enterococos de cada praia (summarise)
+
+```{r}
+quest1
+```
+
+## Questão 2
+
+Faça um gráfico de barras com a variável Beach, ordenando da praia com maior quantidades de amostras para a menor. Colorir gráfico com base na praia. Anotar as porcentagens no topo das barras (ggplot2).
+
+```{r}
+quest2
+```
+
+## Questão 3
+
+Repita a questão 2, fazendo desta vez um gráfico de pizza (ggplot2).
+
+```{r}
+quest3
+```
+
+## Questão 4
+
+Fazer um histograma com todos os dados de enterococos das praias da sua cidade (ggplot2).
+
+```{r}
+quest4
+```
+
+## Questão 5
+
+Fazer box-plots de todas as praias da sua cidade num único gráfico (ggplot2).
+
+```{r}
+quest5
+```
+
