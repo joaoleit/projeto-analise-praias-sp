@@ -2,8 +2,8 @@
 ## Análise estatística da qualidade da água das praias de SP
 
 O projeto tem como propósito analisar o nível de enterococos nas praias de São Paulo.
-A analise é feita em R com o auxilio de algumas bibliotecas (tidyverse, readxl)
+A análise é feita em R com o auxílio de algumas bibliotecas (tidyverse, readxl)
 
-Um relatório mais detalhado pode ser encotrado [clicando aqui](./Relatorio.Rmd).
+Um relatório mais detalhado pode ser encontrado [clicando aqui](./Relatorio.Rmd).
 
 Fiquei responsável pela cidade de Itanhaém, o código-fonte para as respostas das questões podem ser encontrados dentro da pasta [src](src)
