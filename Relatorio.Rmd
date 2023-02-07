@@ -9,8 +9,8 @@ output: html_document
 
 Encontre média, desvio-padrão, mediana, Q1, Q3, mínimo e máximo dos enterococos de cada praia (summarise)
 
-```{r}
-quest1
+```{r questao1}
+praias
 ```
 
 ## Questão 2
@@ -44,4 +44,3 @@ Fazer box-plots de todas as praias da sua cidade num único gráfico (ggplot2).
 ```{r}
 quest5
 ```
-
