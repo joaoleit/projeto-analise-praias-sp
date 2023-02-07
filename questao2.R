@@ -1,4 +1,4 @@
-setwd("C:\\Users\\Joao\\Documents\\R")
+setwd(paste0(getwd(), "/projeto-analise-praias-sp"))
 
 library(readxl)
 library(tidyverse)
@@ -6,24 +6,18 @@ library(tidyverse)
 praias = read_excel('sp_beaches.xlsx') %>%
   filter(City == "ITANHAÉM") %>%
   mutate(Enterococcus = as.numeric(Enterococcus)) %>% 
-  group_by(Beach) %>% 
+  group_by(Beach) %>%
   summarise(
-    media = mean(Enterococcus),
-    desvioPadrao = sd(Enterococcus),
-    minimo = min(Enterococcus),
-    maximo = max(Enterococcus),
-    mediana = median(Enterococcus),
-    Q1 = quantile(Enterococcus, 0.25),
-    Q3 = quantile(Enterococcus, 0.75)
+    amostras = n()
   )
 
 g_barras = praias %>%
-  ggplot(aes(y = reorder(Beach, maximo), x = maximo, fill = Beach)) +
+  ggplot(aes(y = reorder(Beach, amostras), x = amostras, fill = Beach)) +
   geom_bar(stat="identity") +
-  geom_text(aes(x = maximo - 60, label = paste0(round(100 * (maximo / sum(maximo)), 1), "%"))) +
+  geom_text(aes(x = amostras - 60, label = paste0(round(100 * (amostras / sum(amostras)), 1), "%"))) +
   labs(
     title = "Grafico Barra",
-    x = "Máximo",
+    x = "Amostras",
     y = "Praia",
     fill = "Praia"
   )

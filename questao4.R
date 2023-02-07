@@ -1,4 +1,4 @@
-setwd("C:\\Users\\Joao\\Documents\\R")
+setwd(paste0(getwd(), "/projeto-analise-praias-sp"))
 
 library(readxl)
 library(tidyverse)
