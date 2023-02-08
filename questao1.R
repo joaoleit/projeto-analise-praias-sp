@@ -1,12 +1,16 @@
-setwd(paste0(getwd(), "/projeto-analise-praias-sp"))
+# install.packages("rstudioapi")
+library("rstudioapi")
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
+# install.packages("readxl")
 library(readxl)
+# install.packages("tidyverse")
 library(tidyverse)
 
-praias = read_excel('sp_beaches.xlsx') %>%
+praias <- read_excel("sp_beaches.xlsx") %>%
   filter(City == "ITANHAÉM") %>%
-  mutate(Enterococcus = as.numeric(Enterococcus)) %>% 
-  group_by(Beach) %>% 
+  mutate(Enterococcus = as.numeric(Enterococcus)) %>%
+  group_by(Beach) %>%
   summarise(
     media = mean(Enterococcus),
     desvioPadrao = sd(Enterococcus),

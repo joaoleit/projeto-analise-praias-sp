@@ -1,19 +1,20 @@
-setwd(paste0(getwd(), "/projeto-analise-praias-sp"))
+library("rstudioapi")
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
 library(readxl)
 library(tidyverse)
 
-praias = read_excel('sp_beaches.xlsx') %>%
+praias <- read_excel("sp_beaches.xlsx") %>%
   filter(City == "ITANHAÉM") %>%
-  mutate(Enterococcus = as.numeric(Enterococcus)) %>% 
+  mutate(Enterococcus = as.numeric(Enterococcus)) %>%
   group_by(Beach) %>%
   summarise(
     amostras = n()
   )
 
-g_pizza = praias %>% ggplot(aes(x="", y = amostras, fill = Beach)) +
-  geom_bar(stat="identity", width=1) +
-  coord_polar("y", start=0) +
+g_pizza <- praias %>% ggplot(aes(x = "", y = amostras, fill = Beach)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +
   theme_void() +
   geom_col(width = 1, color = 1) +
   geom_text(aes(
