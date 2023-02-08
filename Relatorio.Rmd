@@ -8,8 +8,9 @@ output: html_document
 ## Questão 1
 
 Encontre média, desvio-padrão, mediana, Q1, Q3, mínimo e máximo dos enterococos de cada praia (summarise)
+```{r}
+source("questao1.R", chdir = TRUE)
 
-```{r questao1}
 praias
 ```
 
@@ -18,29 +19,41 @@ praias
 Faça um gráfico de barras com a variável Beach, ordenando da praia com maior quantidades de amostras para a menor. Colorir gráfico com base na praia. Anotar as porcentagens no topo das barras (ggplot2).
 
 ```{r}
-quest2
+source("questao2.R", chdir = TRUE)
+
+g_barras
 ```
+Pelo gráfico de barras podemos perceber com facilidade essa distribuição de amostras entre as praias.
 
 ## Questão 3
 
 Repita a questão 2, fazendo desta vez um gráfico de pizza (ggplot2).
 
 ```{r}
-quest3
+source("questao3.R", chdir = TRUE)
+
+g_pizza
 ```
+Com o gráfico de pizza fica um pouco mais complicado de perceber essa diferença entre a quantidade de amostras.
 
 ## Questão 4
 
 Fazer um histograma com todos os dados de enterococos das praias da sua cidade (ggplot2).
 
 ```{r}
-quest4
+source("questao4.R", chdir = TRUE)
+
+g_histograma
 ```
+Podemos perceber que o histograma é de assimetria positiva, logo que maior parte dos dados se encontra do lado esquerdo do gráfico, e de curtose leptocúrtica, logo que sua distribuição é bem pontiaguda
 
 ## Questão 5
 
 Fazer box-plots de todas as praias da sua cidade num único gráfico (ggplot2).
 
 ```{r}
-quest5
+source("questao5.R", chdir = TRUE)
+
+g_boxplot
 ```
+Nesse boxplot percebe-se que os dados, apesar de se concentrarem nos valores abaixo de 50, existem muitos pontos discrepantes.

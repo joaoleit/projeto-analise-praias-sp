@@ -6,4 +6,4 @@ A análise é feita em R com o auxílio de algumas bibliotecas (tidyverse, readx
 
 Um relatório mais detalhado pode ser encontrado [clicando aqui](./Relatorio.Rmd).
 
-Fiquei responsável pela cidade de Itanhaém, o código-fonte para as respostas das questões podem ser encontrados dentro da pasta [src](src)
+Fiquei responsável pela cidade de Itanhaém, o código-fonte para as respostas das questões podem ser encontrados nos arquivos que terminam com a extensão .R
